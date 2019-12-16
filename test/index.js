@@ -9,3 +9,4 @@ shimbol = require('../cjs');
 
 console.assert(shimbol() !== shimbol());
 console.assert(typeof shimbol() === 'string');
+console.assert(/^__\d+\.\d+$/.test(shimbol()));
