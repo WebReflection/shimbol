@@ -1,0 +1,1 @@
+var shimbol="function"==typeof Symbol?Symbol:function(n){return function(){return"__"+n--}}(Date.now()*Math.random());

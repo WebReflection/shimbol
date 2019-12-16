@@ -1,0 +1,29 @@
+{
+  "name": "shimbol",
+  "version": "0.0.0",
+  "description": "",
+  "main": "cjs/index.js",
+  "scripts": {
+    "build": "npm run esm && npm run cjs && npm run min && npm run test",
+    "esm": "cat index.js | sed 's/var shimbol =/export default/' > esm/index.js",
+    "cjs": "ascjs --no-default esm cjs",
+    "min": "uglifyjs index.js --support-ie8 --comments=/^!/ -c -m -o min.js",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc node test/index.js"
+  },
+  "keywords": [
+    "Symbol",
+    "unique",
+    "key"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "ascjs": "^3.1.2",
+    "coveralls": "^3.0.9",
+    "nyc": "^14.1.1",
+    "uglify-js": "^3.7.2"
+  },
+  "module": "esm/index.js",
+  "unpkg": "min.js"
+}
