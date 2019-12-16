@@ -1,7 +1,7 @@
 {
   "name": "shimbol",
   "version": "0.0.0",
-  "description": "",
+  "description": "A simple Symbol-like function to create one-off unique keys.",
   "main": "cjs/index.js",
   "scripts": {
     "build": "npm run esm && npm run cjs && npm run min && npm run test",
@@ -14,7 +14,8 @@
   "keywords": [
     "Symbol",
     "unique",
-    "key"
+    "key",
+    "IE11"
   ],
   "author": "Andrea Giammarchi",
   "license": "ISC",
@@ -25,5 +26,14 @@
     "uglify-js": "^3.7.2"
   },
   "module": "esm/index.js",
-  "unpkg": "min.js"
+  "unpkg": "min.js",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/shimbol.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/shimbol/issues"
+  },
+  "homepage": "https://github.com/WebReflection/shimbol#readme"
 }
