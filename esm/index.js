@@ -4,4 +4,4 @@ export default typeof Symbol === 'function' ?
     return function () {
       return '__' + uid--;
     };
-  }(Date.now() * Math.random()));
+  }(new Date * Math.random()));
