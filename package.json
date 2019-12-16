@@ -1,6 +1,6 @@
 {
   "name": "shimbol",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple Symbol-like function to create one-off unique keys.",
   "main": "cjs/index.js",
   "scripts": {
